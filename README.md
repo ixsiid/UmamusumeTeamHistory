@@ -1,1 +1,1 @@
-# UmamusumeTeamHistory
+# Vue project template
