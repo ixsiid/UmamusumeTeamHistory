@@ -1,15 +1,17 @@
 <template>
 	<div id="title">
+    <Develop v-show="developement" />
 		<h1>Hello, world</h1>
 	</div>
 </template>
 
 <script>
-// import Article from "./components/Article.vue";
+import Develop from "./components/Develop.vue";
+
 export default {
   name: "App",
   components: {
-//    Article,
+    Develop,
   },
   data: function() {
     return {
@@ -18,6 +20,9 @@ export default {
       isColorEdit: false,
       scrollParam: {}
     };
+  },
+  computed: {
+    developement: () => process.env.NODE_ENV && process.env.NODE_ENV.startsWith('development'),
   },
   methods: {
     windowLoad: function() {
