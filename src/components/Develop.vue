@@ -42,6 +42,7 @@ export default {
   display: flex;
   flex-direction: columns;
   margin: 0;
+  pointer-events: none;
 }
 
 .develop > * {
